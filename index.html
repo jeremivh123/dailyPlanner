@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/> 
+        <title>Daily Planner</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/localStorage/2.0.1/localStorage.min.js"></script>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="https://kit.fontawesome.com/fe9a3c5882.js" crossorigin="anonymous"></script>    
+    </head>   
+        <body>
+            
+                    <div id="header">
+                        <div>
+                            <hi>Daily Planner</hi>
+                        </div>
+                            <div>
+                                <h2></h2>
+                            </div>
+                            
+                    </div>   
+                       
+                        <div id="container">
+                           <table id="table">
+                               <tr>
+                                 <td id="time">9am</td>
+                                 <td>
+                                     <input type="text" class="input" size="100%">
+                                 </td>
+                                 <td>
+                                     <button class="button"><i class="fas fa-lock-open"></i></button>                
+                                 </td>  
+                               </tr>
+               
+                               <tr>
+                                   <td id="time">10am</td>
+                                   <td>
+                                       <input type="text" class="input" size="100%">
+                                   </td>
+                                   <td>
+                                           <button class="button"><i class="fas fa-lock-open"></i></button>
+                                   </td>  
+                                </tr>
+               
+                               <tr>
+                                   <td id="time">11am</td>
+                                   <td>
+                                       <input type="text" class="input" size="100%">
+                                   </td>
+                                    <td>
+                                       <button class="button"><i class="fas fa-lock-open"></i></button>
+                                    </td>  
+                               </tr>
+               
+                               <tr>
+                                   <td id="time">12pm</td>
+                                   <td>
+                                       <input type="text" class="input" size="100%">
+                                   </td>
+                                   <td>
+                                       <button class="button"><i class="fas fa-lock-open"></i></button>
+                                   </td>  
+                                </tr>
+               
+                               <tr>
+                                   <td id="time">1pm</td>
+                                   <td>
+                                       <input type="text" class="input" size="100%">
+                                   </td>
+                                   <td>
+                                       <button class="button"><i class="fas fa-lock-open"></i></button>
+                                   </td>  
+                               </tr>
+               
+                                <tr>
+                                   <td id="time">2pm</td>
+                                   <td>
+                                       <input type="text" class="input" size="100%">
+                                   </td>
+                                   <td>
+                                       <button class="button"><i class="fas fa-lock-open"></i></button>
+                                   </td>  
+                               </tr>
+               
+                               <tr>
+                                   <td id="time">3pm</td>
+                                   <td>
+                                       <input type="text" class="input" size="100%">
+                                   </td>
+                                   <td>
+                                       <button class="button"><i class="fas fa-lock-open"></i></button>
+                                   </td>  
+                               </tr>
+               
+                               <tr>
+                                   <td id="time">4pm</td>
+                                   <td>
+                                       <input type="text" class="input" size="100%">
+                                   </td>
+                                   <td>
+                                       <button class="button"><i class="fas fa-lock-open"></i></button>
+                                   </td>  
+                               </tr>
+               
+                               <tr>
+                                   <td id="time">5pm</td>
+                                   <td>
+                                       <input type="text" class="input" size="100%">
+                                   </td>
+                                   <td>
+                                       <button class="button"><i class="fas fa-lock-open"></i></button>
+                                   </td>  
+                               </tr>
+                           </table>
+                        </div>
+                        
+            
+         
+        <script src="moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            console.log(moment().format('dddd'));
+            $("h2").append(moment().format('dddd'));
+
+            $(".button").on('click', function(){
+                $(this).toggleClass("buttonPressed");
+            });
+            
+            function localStorage() {
+  var plan = localStorage.$(".input");
+  
+
+  if (plan === null) {
+    return;
+  }
+
+  $(".input").textContent = plan;
+  console.log(localStorage);
+}
+        </script>
+    </body>
+</html>
